@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 700px;
+    border: 1px solid black;
+}
+
+#gridSquare {
+    height: 100px;
+    width: 100px;
+}
+
+#gridSizeButton {
+    padding: 10px 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 700px;
+    
+}
