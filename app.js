@@ -50,7 +50,7 @@ function gridDraw() {
             let selectedSquare = event.target;
             let opacity = Number(selectedSquare.style.opacity);
             if (opacity < 1) {
-                selectedSquare.style.backgroundColor = "black";
+                selectedSquare.style.backgroundColor = changeColor();;
                 selectedSquare.style.opacity = opacity + 0.1;
             }
         });
@@ -59,10 +59,22 @@ function gridDraw() {
 
 const gridSizeButton = document.createElement("button");
 buttons.appendChild(gridSizeButton);
-gridSizeButton.textContent = "Grid Size";
+gridSizeButton.textContent = "New Grid";
 gridSizeButton.id = "gridSizeButton";
 
 gridSizeButton.addEventListener("click", function () {
     gridSize = getGridSize();
     createGrid(gridSize);
 });
+
+// give user color flexibilty
+const colorPicker = document.querySelector("#color");
+const colorValue = document.querySelector("#color-value");
+
+function changeColor() {
+    colorPicker.addEventListener ("input", () => {
+        colorValue.innerHTML = colorPicker.value;
+    });
+    return colorValue.innerHTML
+}
+

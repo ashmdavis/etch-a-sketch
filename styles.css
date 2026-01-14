@@ -25,6 +25,14 @@ body {
 #gridSizeButton {
     padding: 10px 20px;
 }
+.color-picker {
+    display: flex;
+    flex-direction: column;
+}
+
+#color-value {
+    visibility: hidden;
+}
 
 footer {
     display: flex;
